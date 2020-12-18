@@ -26,7 +26,10 @@ def enviar():
         tcp.send(str.encode(msg))
         break
     tcp.close()
-
+    
+def emitir():
+    print(f'Nome:, {client[0]},\nCPF:, {client[1]}, \nIda:, {client[2]}, \nVolta:,{client[3]}, \nPoltrona:, {client[4]}')
+    print('\nBoa viagem!')
 
 while True:
     resposta = menu(['Cadastro Cliente', 'Data ida e Volta','Assento(Lugar)', 'Emitir passagem', 'Sair'])
@@ -43,6 +46,7 @@ while True:
         lugar(arquivo)
     elif resposta == 4:
         enviar()
+        emitir()
     
     elif resposta == 5:
         cabeçalho('Operação Finalizada!')

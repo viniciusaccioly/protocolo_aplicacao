@@ -1,5 +1,4 @@
 from interface import *
-from arquivos import * 
 import socket
 HOST = '127.0.0.1'     # Endereco IP do Servidor
 PORT = 5000            # Porta que o Servidor esta
@@ -23,9 +22,9 @@ def lugar(assento):
 
 def enviar():
     msg= str(client)
-    #msg= str(emitir())
     while True:
         tcp.send(str.encode(msg))
+        break
     tcp.close()
 
 
@@ -39,13 +38,10 @@ while True:
         ida= input('Data de ida: ')
         volta = input("Data de volta: ")
         datas(ida, volta)
-        #cabeçalho('Opção 2')
     elif resposta == 3:
         arquivo = input("Poltrona: ")
         lugar(arquivo)
-        #cabeçalho('Opção 3')
     elif resposta == 4:
-        #emitir()
         enviar()
     
     elif resposta == 5:

@@ -1,9 +1,9 @@
-Projeto Protocolo de Aplicação.
-
-Alunos: Vinicius
-	Rafael
+Projeto de Emissão de Passagem Aérea
+Alunos: - Rafael 
+        - Vinicius 
 
 ## Descrição
 
-Serviço de emissão de passagem area, conectando o cliente com o servidor
-no cliente solicita as informações dos clientes datas da viagem e poltrona, em seguida na opção de emitir envia todos esses dados para o servidor. 
+
+Este projeto tem como finalidade implantar um sistema de emissão de passagem aérea por meio digital. Tal projeto foi criado com uso de API de Sockets com uso de código em linguagem Python e usando o Protocolo TCP.
+

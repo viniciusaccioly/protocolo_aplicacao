@@ -9,15 +9,20 @@ tcp.connect(dest)
 client = []
 
 def clientes(nome, cpf):
-    client.append(nome)
-    client.append(cpf)
+    nNome="NOME:"+ nome
+    nCpf= "CPF:" + cpf
+    client.append(nNome)
+    client.append(nCpf)
 
 def datas(ida,volta):
-    client.append(ida)
-    client.append(volta)
+    nIda = "Ida:" +ida
+    nVolta = "Volta:" + volta
+    client.append(nIda)
+    client.append(nVolta)
 
 def lugar(assento):
-    client.append(assento)
+    asse= "Assento:" + assento
+    client.append(asse)
 
 
 def enviar():
@@ -25,17 +30,16 @@ def enviar():
     while True:
         tcp.send(str.encode(msg))
         break
-    tcp.close()
-    
+        
 def emitir():
-    print(f'Nome:, {client[0]},\nCPF:, {client[1]}, \nIda:, {client[2]}, \nVolta:,{client[3]}, \nPoltrona:, {client[4]}')
-    print('\nBoa viagem!')
+    print("\n", client[0], "\n", client[1], "\n", client[2], "\n", client[3], "\n", client[4])
+    print("\nBoa viagem!")
 
 while True:
     resposta = menu(['Cadastro Cliente', 'Data ida e Volta','Assento(Lugar)', 'Emitir passagem', 'Sair'])
     if resposta == 1:
         name = input("Nome completo: ")
-        cpf = int(input("numero cpf:"))
+        cpf = input("Numero cpf:")
         clientes(name, cpf)
     elif resposta == 2:
         ida= input('Data de ida: ')
@@ -47,9 +51,9 @@ while True:
     elif resposta == 4:
         enviar()
         emitir()
-    
     elif resposta == 5:
         cabeçalho('Operação Finalizada!')
+        tcp.close()
         break    
     else:
         print('\033[31mERRO! Informe uma Opção Válida!\033[m')

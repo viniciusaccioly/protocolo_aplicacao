@@ -1,7 +1,9 @@
 Projeto de Emissão de Passagem Aérea
-Alunos: - Rafael 
-        - Vinicius 
 
+Alunos: 
+        - Rafael 
+        - Vinicius 
+        
 ## Descrição
 
 
